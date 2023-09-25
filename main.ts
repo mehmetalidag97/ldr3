@@ -28,7 +28,7 @@ namespace button {
      */
     //% block
     //% subcategory="BUTTON"
-    export function ReadbuttonValue(): number {
+    export function ReadButtonValue(): number {
         let buttonValue = pins.digitalReadPin(2);
         return buttonValue;
     }
