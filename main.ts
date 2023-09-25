@@ -1,11 +1,26 @@
+namespace ldr {
+    //% block="ldr read"
+    export function ldrread(): number {
+        let result;
+        result = pins.analogReadPin(AnalogPin.P0);
+        return result;
+    }
+}
+
+namespace pot {
+    //% block="pot read"
+    export function potread(): number {
+        let result;
+        result = pins.analogReadPin(AnalogPin.P1);
+        return result;
+    }
+}
+
 namespace button {
-    //% blockId=button_is_pressed
-    //% block="button %button|is pressed"
-    export function isPressed(button: Button): boolean {
-        if (button === button) {
-            return pins.digitalReadPin(DigitalPin.P2) == 1;
-        } else {
-            return pins.digitalReadPin(DigitalPin.P2) == 0;
-        }
+    //% block="button read"
+    export function buttonread(): number {
+        let result;
+        result = pins.digitalReadPin(DigitalPin.P2);
+        return result;
     }
 }
