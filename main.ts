@@ -1,35 +1,22 @@
-namespace ldr {
-    /**
-     * Read the LDR value (0-1023).
-     */
-    //% block
-    //% subcategory="LDR"
-    export function ReadLdrValue(): number {
-        let ldrValue = pins.analogReadPin(0);
-        return ldrValue;
-    }
+enum btnList {
+    //% block="M-LEFT"
+    cleft = 2,
 }
 
-namespace potentiometer {
-    /**
-     * Read the POT value (0-1023).
-     */
-    //% block
-    //% subcategory="POT"
-    export function ReadPotValue(): number {
-        let potValue = pins.analogReadPin(1);
-        return potValue;
-    }
+enum eventList {
+    //% block="PRESSED"
+    pressed = 1,
+    //% block="RELEASED"
+    released = 0
 }
+namespace JoyBit {
+    export function btnPressed(btn: btnList, btnEvent: eventList): boolean {
 
-namespace button {
-    /**
-     * Read the button value (0-1).
-     */
-    //% block
-    //% subcategory="BUTTON"
-    export function ReadButtonValue(): number {
-        let buttonValue = pins.digitalReadPin(2);
-        return buttonValue;
+        if (btn == btnList.cleft) {
+            return pins.digitalReadPin(DigitalPin.P8) == btnEvent;
+        } 
+        else {
+            return pins.digitalReadPin(DigitalPin.P15) == btnEvent;
+        }
     }
 }
