@@ -5,7 +5,7 @@ namespace ldr {
     //% block
     //% subcategory="LDR"
     export function ReadLdrValue(): number {
-        let ldrValue = pins.analogReadPin(27);
+        let ldrValue = pins.analogReadPin(0);
         return ldrValue;
     }
 }
@@ -17,7 +17,19 @@ namespace potentiometer {
     //% block
     //% subcategory="POT"
     export function ReadPotValue(): number {
-        let potValue = pins.analogReadPin(26);
+        let potValue = pins.analogReadPin(1);
         return potValue;
+    }
+}
+
+namespace button {
+    /**
+     * Read the button value (0-1).
+     */
+    //% block
+    //% subcategory="BUTTON"
+    export function ReadbuttonValue(): number {
+        let buttonValue = pins.digitalReadPin(2);
+        return buttonValue;
     }
 }
