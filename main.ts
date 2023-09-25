@@ -1,3 +1,6 @@
+//% subcategory="LDR"
+//% subcategory="Button"
+//% subcategory="Pot"
 namespace ldr {
     //% block="ldr read"
     export function ldrread(): number {
