@@ -1,7 +1,5 @@
-//% subcategory="LDR"
-//% subcategory="Button"
-//% subcategory="Pot"
 namespace ldr {
+    //% subcategory="LDR"
     //% block="ldr read"
     export function ldrread(): number {
         let result;
@@ -11,6 +9,8 @@ namespace ldr {
 }
 
 namespace pot {
+    //% subcategory="POT"
+
     //% block="pot read"
     export function potread(): number {
         let result;
@@ -20,6 +20,7 @@ namespace pot {
 }
 
 namespace button {
+    //% subcategory="BUTTON"
     //% block="button read"
     export function buttonread(): number {
         let result;
