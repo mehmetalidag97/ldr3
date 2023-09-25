@@ -1,9 +1,10 @@
-namespace ldrtest {
+namespace ldr {
     /**
      * Read the LDR value (0-1023).
      */
     //% block
     //% subcategory="LDR"
+
     export function ReadLdrValue(): number {
         return 0; 
     }
