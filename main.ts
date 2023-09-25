@@ -1,22 +1,11 @@
-enum btnList {
-    //% block="M-LEFT"
-    cleft = 2,
-}
-
-enum eventList {
-    //% block="PRESSED"
-    pressed = 1,
-    //% block="RELEASED"
-    released = 0
-}
-namespace JoyBit {
-    export function btnPressed(btn: btnList, btnEvent: eventList): boolean {
-
-        if (btn == btnList.cleft) {
-            return pins.digitalReadPin(DigitalPin.P8) == btnEvent;
-        } 
-        else {
-            return pins.digitalReadPin(DigitalPin.P15) == btnEvent;
+namespace button {
+    //% blockId=button_is_pressed
+    //% block="button %button|is pressed"
+    export function isPressed(button: Button): boolean {
+        if (button === button) {
+            return pins.digitalReadPin(DigitalPin.P2) == 1;
+        } else {
+            return pins.digitalReadPin(DigitalPin.P2) == 0;
         }
     }
 }
