@@ -4,7 +4,7 @@ namespace ldrtest {
      */
     //% block
     //% subcategory="LDR"
-    export function readValue(): number {
+    export function ReadLdrValue(): number {
         return 0; 
     }
 }
@@ -15,7 +15,7 @@ namespace potentiometer {
      */
     //% block
     //% subcategory="POT"
-    export function readValue(): number {
+    export function ReadPotValue(): number {
         return 0;
     }
 }
